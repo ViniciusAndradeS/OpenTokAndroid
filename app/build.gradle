@@ -1,9 +1,10 @@
 apply plugin: 'com.android.application'
 
 android {
+    signingConfigs {
+    }
     compileSdkVersion 22
     buildToolsVersion "23.0.3"
-
     defaultConfig {
         applicationId "com.example.viniciusandrade.opentok"
         minSdkVersion 16
@@ -12,16 +13,50 @@ android {
         versionName "1.0"
     }
     buildTypes {
-        release {
+        zewindra.initWith(debug)
+        zewindra {
             minifyEnabled false
+            debuggable true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            buildConfigField "String", "API_KEY", "\"45649432\""
+            buildConfigField "String", "SESSION_ID", "\"2_MX40NTY0OTQzMn5-MTQ3MzIwMTU1NzA1Nn5CUDkyLytHSnJXMTNjUTFhdWFHeTIwb1V-fg\""
+            buildConfigField "String", "TOKEN", "\"T1==cGFydG5lcl9pZD00NTY0OTQzMiZzaWc9MWNkMjRjMzZhYmVhMDRkZWI3NzljNmUyZWU2MjVkNDdiM2MzMzQ3YjpzZXNzaW9uX2lkPTJfTVg0ME5UWTBPVFF6TW41LU1UUTNNekl3TVRVMU56QTFObjVDVURreUx5dEhTbkpYTVROalVURmhkV0ZIZVRJd2IxVi1mZyZjcmVhdGVfdGltZT0xNDczMjAxNTc5Jm5vbmNlPTAuMDI0MjQ0MDMwMjM5MDYwNTImcm9sZT1wdWJsaXNoZXImZXhwaXJlX3RpbWU9MTQ3NTc5MzU3OA==\""
+            buildConfigField "String", "ROBOT_ID", "\"287aa9c8-a165-4662-8201-623dec1ab43a\""
+            buildConfigField "int", "PID", "0x0001"
+        }
+        robotop.initWith(debug)
+        robotop {
+            minifyEnabled false
+            debuggable true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            buildConfigField "String", "API_KEY", "\"45649412\""
+            buildConfigField "String", "SESSION_ID", "\"1_MX40NTY0OTQxMn5-MTQ3MzE5OTc2NzA2Mn53YTNBOTh6OEVpN29EUXBnNGhpL29OeHd-fg\""
+            buildConfigField "String", "TOKEN", "\"T1==cGFydG5lcl9pZD00NTY0OTQxMiZzaWc9ZmQyMzlhY2NiYWU5ZGY3NzI5MzFlYTRiZWNiOTM0N2Y4Y2Q2ZmZhYjpzZXNzaW9uX2lkPTFfTVg0ME5UWTBPVFF4TW41LU1UUTNNekU1T1RjMk56QTJNbjUzWVROQk9UaDZPRVZwTjI5RVVYQm5OR2hwTDI5T2VIZC1mZyZjcmVhdGVfdGltZT0xNDczMTk5NzczJm5vbmNlPTAuNjY4NjY4NzUzNDY3NTAwMiZyb2xlPXB1Ymxpc2hlciZleHBpcmVfdGltZT0xNDc1NzkxNzcy\""
+            buildConfigField "String", "ROBOT_ID", "\"4f0bf0c0-7a96-4456-941b-1f7991d8f8a4\""
+            buildConfigField "int", "PID", "0x0043"
+        }
+        debug {
+        }
+        release {
         }
     }
 }
 
+android.variantFilter { variant ->
+    if(variant.buildType.name.equals('release') || variant.buildType.name.equals('debug')) {
+        variant.setIgnore(true);
+    }
+}
+
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile fileTree(include: ['*.jar'], dir: 'libs')
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:22.2.0'
     compile 'com.opentok.android:opentok-android-sdk:2.8.+'
+    compile files('src/main/java/com/example/viniciusandrade/opentok/libs/commons-cli-1.1.jar')
+    compile files('src/main/java/com/example/viniciusandrade/opentok/libs/commons-io-1.2.jar')
+    compile files('src/main/java/com/example/viniciusandrade/opentok/libs/hamcrest-core.jar')
+    compile files('src/main/java/com/example/viniciusandrade/opentok/libs/junit.jar')
+    compile files('src/main/java/com/example/viniciusandrade/opentok/libs/rabbitmq-client.jar')
+    compile files('src/main/java/com/example/viniciusandrade/opentok/libs/rabbitmq-client-tests.jar')
 }

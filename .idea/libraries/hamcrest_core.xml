@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="hamcrest-core">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/app/src/main/java/com/example/viniciusandrade/opentok/libs/hamcrest-core.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
