@@ -30,8 +30,8 @@ android {
             debuggable true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
             buildConfigField "String", "API_KEY", "\"45699692\""
-            buildConfigField "String", "SESSION_ID", "\"1_MX40NTY5OTY5Mn5-MTQ3NjE0MDUyMDAzMn5tZmUzQ0tLL2xCS2lKZmRpY2U2V3hrL2x-fg\""
-            buildConfigField "String", "TOKEN", "\"T1==cGFydG5lcl9pZD00NTY5OTY5MiZzaWc9MDFkMDBlNDk5MTVjYzdkYWNjMDhiMjYzMjg0YWZkNmVmOTkxNjg1OTpzZXNzaW9uX2lkPTFfTVg0ME5UWTVPVFk1TW41LU1UUTNOakUwTURVeU1EQXpNbjV0Wm1VelEwdExMMnhDUzJsS1ptUnBZMlUyVjNockwyeC1mZyZjcmVhdGVfdGltZT0xNDc2MTQwNTM1Jm5vbmNlPTAuNzg5OTEzMjYxNzc0OTI3NCZyb2xlPXB1Ymxpc2hlciZleHBpcmVfdGltZT0xNDc2MTQ0MTM0\""
+            buildConfigField "String", "SESSION_ID", "\"2_MX40NTY5OTY5Mn5-MTQ3NjQ4OTU5MTIzNH5HZ09TSnFuYVFPTmNvT3NrblBRZ0VMaVN-fg\""
+            buildConfigField "String", "TOKEN", "\"T1==cGFydG5lcl9pZD00NTY5OTY5MiZzaWc9NjViZDA4NmI4OTA4ZThiMGU4MzM5YTFmYjkyMTQ0ZjNmNmQ5ZjAyZTpzZXNzaW9uX2lkPTJfTVg0ME5UWTVPVFk1TW41LU1UUTNOalE0T1RVNU1USXpOSDVIWjA5VFNuRnVZVkZQVG1OdlQzTnJibEJSWjBWTWFWTi1mZyZjcmVhdGVfdGltZT0xNDc2NDg5NjA1Jm5vbmNlPTAuMTcwNTA0MzczMjY1NDMwMzMmcm9sZT1wdWJsaXNoZXImZXhwaXJlX3RpbWU9MTQ3OTA3ODAwNA==\""
             buildConfigField "String", "ROBOT_ID", "\"4f0bf0c0-7a96-4456-941b-1f7991d8f8a4\""
             buildConfigField "int", "PID", "0x0043"
         }

@@ -142,8 +142,6 @@ public class MainActivity extends AppCompatActivity implements Session.SessionLi
                     QueueingConsumer consumer = new QueueingConsumer(channel);
                     channel.basicConsume(q.getQueue(), true, consumer);
 
-                    channel.basicConsume("robot-287aa9c8-a165-4662-8201-623dec1ab43a", true, consumer);
-
                     while (true) {
                         QueueingConsumer.Delivery delivery = consumer.nextDelivery();
                         String message = new String(delivery.getBody());
